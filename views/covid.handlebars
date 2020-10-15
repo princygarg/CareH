@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+
+   <div  id="div-li" >
+        <div class="row">
+              <div id="col">
+    <h1 style="color:white" id="f" >Add User</h1>
+    </div>
+             <form method="post" action="/app/covid" center="true">
+                 <div class="form-group row">
+                     <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Username</label>
+                     <div class="col-sm-9 col-md-9 col-lg-5">
+                          <input class="form-control" style="width: 100%;" type="text" name="username" required="true" placeholder="Enter username...">
+                     </div>
+                 </div>
+                 <div class="form-group row">
+                     <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Password</label>
+                     <div class="col-sm-9 col-md-9 col-lg-5">
+                          <input class="form-control" style="width: 100%;" type="password" name="password" required="true" placeholder="Enter password...">
+                     </div>
+                 </div>
+                 <button type="submit" style="float: right;" class="btn btn-primary">Add user</button>
+             </form>
+        </div>
+   </div>
+
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/systemSettings.js"></script>

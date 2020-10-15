@@ -4,11 +4,9 @@
 
 <div id="div-li" >
    <div id="col">
-    <h1 style="color:white" id="f" >Add Patients</h1>
+    <h1 style="color:white" id="f" >Add Patient</h1>
     </div>
     <form action="/app/addpatient" method="post" >
-    
-        <!-- First name input -->
         <div class="form-group row " >
             <label  class="col-sm-3 col-md-3 col-lg-3 col-form-label">First Name</label>
             <div class="col-sm-2 col-md-2 col-lg-6" >
@@ -16,7 +14,6 @@
             </div>
         </div>
 
-        <!-- Last name input -->
         <div class="form-group row">
             <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Last Name</label>
             <div class="col-sm-9 col-md-9 col-lg-6">
@@ -24,15 +21,13 @@
             </div>
         </div>
 
-        <!-- Hospital number input -->
         <div class="form-group row">
-            <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Hospital no.</label>
+            <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Contact no.</label>
             <div class="col-sm-9 col-md-9 col-lg-6">
-                <input class="form-control" style="width: 100%;" type="text" name="hospitalNumber" required="true" placeholder="Enter Hospital no...">
+                <input class="form-control" style="width: 100%;" type="text" name="contactNumber" required="true" placeholder="Enter Contact no. of patient...">
             </div>
         </div>
 
-        <!-- Date of birth -->
         <div class="form-group row">
             <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Date of birth</label>
             <div class="col-sm-9 col-md-9 col-lg-6">
@@ -40,9 +35,6 @@
             </div>
         </div>
 
-
-
-        <!-- Sex -->
         <div class="form-group row">
             <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Sex</label>
             <div class="col-sm-9 col-md-9 col-lg-9">
@@ -58,7 +50,7 @@
         </div>
 
     	<table id="add-new-patient" class="table table-striped table-bordered" cellspacing="0" width="100%">
-    		<!-- JavaScript works here! -->
+    		
     	</table>
     	<input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Add patient">
     </form>

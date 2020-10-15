@@ -76,6 +76,7 @@ var appRoute = require('./routes/app');
 var patients = require('./routes/patients');
 var disease = require('./routes/disease');
 var room = require('./routes/room');
+var covid = require('./routes/covid');
 
 app.use('/', login);
 app.use('/', appRoute);
@@ -83,6 +84,7 @@ app.use('/', user);
 app.use('/', patients);
 app.use('/', disease);
 app.use('/', room);
+app.use('/', covid);
 
 var timestamp = new Date().getTime();
 
