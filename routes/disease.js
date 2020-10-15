@@ -3,6 +3,7 @@ const _ = require('lodash');
 const router = express.Router();
 
 var {scoreOfDisease, Disease} = require('./../server/models/diseases.js');
+var {Patient} = require('./../server/models/patient.js');
 
 router.get('/app/adddiseasePage', (req, res) => {
     res.status(200).render('adddisease', {pageTitle: "Add disease"});

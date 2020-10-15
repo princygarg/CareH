@@ -12,6 +12,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongo = require('mongodb');
 var {mongoose} = require('./server/db/mongoose.js');
+var seedDB = require("./seeds");
 
 var app = express();
 app.use(express.static(__dirname + '/views'));
@@ -23,6 +24,9 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
+
+seedDB();
+
 app.use(session({
     secret: 'secret',
     saveUninitialized: true,
