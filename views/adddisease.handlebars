@@ -1,20 +1,24 @@
 <link rel="stylesheet" type="text/css" href="/css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
 
-    <div class="col-md-4 col-lg-4" style="padding-right: 30px; padding-left: 30px;">
+    <div id="div-li">
          <div class="row">
-            <h4 style="margin-top: 0px;">Add new disease in the system</h4>
+              <div id="col">
+            <h1 style="color:white" id="f" >Add new disease in the system</h1>
+                </div>
+             
+          
             <form action="/app/adddiseasePage" method="post">
                 <div class="form-group row">
-                    <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Disease name</label>
-                    <div class="col-sm-7 col-md-7 col-lg-7">
+                    <label class="col-sm-5 col-md-5 col-lg-5 col-form-label ">Disease name</label>
+                    <div class="col-sm-7 col-md-7 col-lg-5">
                         <input class="form-control" style="width: 100%;" type="text" name="diseaseName" required="true" placeholder="Enter new disease name...">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Disease score</label>
-                    <div class="col-sm-7 col-md-7 col-lg-7">
+                    <div class="col-sm-7 col-md-7 col-lg-5">
                         <input class="form-control" style="width: 100%;" type="number" name="diseaseScore" required="true" placeholder="Enter new disease score...">
                     </div>
                 </div>
