@@ -74,7 +74,6 @@ var login = require('./routes/login');
 var user = require('./routes/user');
 var appRoute = require('./routes/app');
 var patients = require('./routes/patients');
-var settings = require('./routes/settings');
 var disease = require('./routes/disease');
 var room = require('./routes/room');
 
@@ -82,7 +81,6 @@ app.use('/', login);
 app.use('/', appRoute);
 app.use('/', user);
 app.use('/', patients);
-app.use('/', settings);
 app.use('/', disease);
 app.use('/', room);
 
