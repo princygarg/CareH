@@ -3,7 +3,6 @@ const _ = require('lodash');
 var {scoreOfDisease, Disease} = require('./diseases.js');
 var rooms = require('./rooms.js');
 
-// User Schema
 var PatientSchema = mongoose.Schema({
 	firstName: {
 		type: String,
@@ -18,8 +17,6 @@ var PatientSchema = mongoose.Schema({
 		required: true,
 	},
 	sex: {
-		// true = male
-		// false = female
 		type: Boolean,
 		required: true,
 		default: true
@@ -49,14 +46,8 @@ var PatientSchema = mongoose.Schema({
 	}
 });
 
-/*
-	function to update the diseases and the score of a patient
-	*Requires the patient to have the diseases already saved in the databases
-*/
 PatientSchema.methods.updateScore = function () {
 	var patient = this;
-
-	// promise to get the patient object inside the diseases callback
 	var promise = new Promise(function(resolve, reject) {
 		resolve(patient);
 		reject(patient);
@@ -71,7 +62,6 @@ PatientSchema.methods.updateScore = function () {
              var score = 0;
 
 		   if (! _.isEmpty(diseases) && _.isArray(diseases)) {
-                 // create a hashmap with the diseases and their scores
                  for (var i = 0; i < diseases.length; ++i) {
                      scoreOfDisease[diseases[i].name] = diseases[i].score;
                  }

@@ -15,19 +15,12 @@ $(document).ready(function() {
        $("#date-of-birth-disabled").attr("placeholder", patient["dateOfBirth"]);
        $("#patient-score").html(patient["score"]);
 
-
-/*
-       Sex of the patient
-*/
        if (patient["sex"] === true) {
            $("#patient-sex-disabled").attr("placeholder", "Male");
        } else if (patient["sex"] === false) {
            $("#patient-sex-disabled").attr("placeholder", "Female");
        }
 
-/*
-      Room of the patient
-*/
        if (patient["room"] === "noroom") {
            $("#patient-room-disabled").attr("placeholder", 'No room assigned');
        } else {
@@ -37,9 +30,6 @@ $(document).ready(function() {
            $("#patient-room-disabled").after("<a id=\"delete-room-button\" class=\"btn btn-primary btn-lg btn-block\" href=\"" + patientDeleteRoomLink +"\">Move to waiting list</a>");
        }
 
-/*
-       Score panel
-*/
        if (patient["score"] <=5) {
            $("#panel-score").attr("class", "panel panel-primary");
        } else if (patient["score"] < 25) {
@@ -57,7 +47,7 @@ $(document).ready(function() {
            for(var disease in allDiseases) {
              var diseaseScoreCheckbox = [];
         	   diseaseScoreCheckbox[0] = disease;
-        	   diseaseScoreCheckbox[1] = allDiseases[disease]; // This is the score.
+        	   diseaseScoreCheckbox[1] = allDiseases[disease];
 
         	   var input;
                if (patient["diseases"].length !== 0) {
@@ -76,8 +66,6 @@ $(document).ready(function() {
           	diseaseScoreCheckbox[2] = input;
         	     diseasesScoresCheckboxes.push(diseaseScoreCheckbox)
            }
-
-           // Add name, sex, number, age before the table.
            $('#diagnosis').dataTable({
 		      data: diseasesScoresCheckboxes,
 		      columns:[{

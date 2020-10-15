@@ -10,8 +10,6 @@ $(document).ready(function() {
   $.getJSON(patientsAPI).done(function(patients) {
 	  var roomsAPI = URL + "/app/getrooms";
 	  $.getJSON(roomsAPI).done(function(rooms1) {
-
-          // iterate through all rooms
 	  	  for(var room in rooms1) {
 		  	  var freeRoomsRowConstructor = [];
 
@@ -31,9 +29,6 @@ $(document).ready(function() {
                  var timeDifference = actualTime - patient.lastUpdate;
 
                  var timeDifferenceInMinutes = Math.abs(timeDifference) / 60 / 1000;
-
-                 // check if he need to be updated
-                 // @@@@@@@@@@@@@@@@@@@@@@@@@@ -> need to change the time for the interval to be updated
                  if (timeDifferenceInMinutes > 1440) {
                     patientsRowConstructor.push("<span class=\"glyphicon glyphicon-warning-sign\" style=\"color: red;\"></span>   " + patient["firstName"] + " " + patient["lastName"]);
                  } else {
@@ -76,16 +71,11 @@ $(document).ready(function() {
                  },
                aaSorting: [[2, 'desc']],
                fnCreatedRow: function(nRow, aData, iDisplayIndex) {
-                    // nRow - this is the HTML element of the row
-                    // aData - array of the data in the columns. Get column 4 data: aData[3]
-                    // iDataIndex - row index in the table
-
-                   // color the Score field
-                   if (aData[2] > 35) { // red
+                   if (aData[2] > 35) { 
                        $('td:eq(2)', nRow).css("background-color", "#ffad99");
-                   } else if (aData[2] >=25) { // orange
+                   } else if (aData[2] >=25) { 
                        $('td:eq(2)', nRow).css("background-color", "#ffdd99");
-                   } else if (aData[2] >= 5) { // yellow
+                   } else if (aData[2] >= 5) {
                        $('td:eq(2)', nRow).css("background-color", "#ffffcc");
                    }
                }
@@ -117,22 +107,16 @@ $(document).ready(function() {
                 },
                 aaSorting: [[3, 'desc']],
                 fnCreatedRow: function(nRow, aData, iDisplayIndex) {
-                     // nRow - this is the HTML element of the row
-                     // aData - array of the data in the columns. Get column 4 data: aData[3]
-                     // iDataIndex - row index in the table
-
-                    // color the Score field
-                    if (aData[3] >= 35) { // red
+                    if (aData[3] >= 35) { 
                         $('td:eq(3)', nRow).css("background-color", "#ffad99");
-                    } else if (aData[3] >=20) { // orange
+                    } else if (aData[3] >=20) { 
                         $('td:eq(3)', nRow).css("background-color", "#ffdd99");
-                    } else if (aData[3] >= 10) { // yellow
+                    } else if (aData[3] >= 10) { 
                         $('td:eq(3)', nRow).css("background-color", "#ffffcc");
                     }
                 }
             });
 
-			//  table with free rooms in the right side
 		  $('#free-rooms').dataTable({
 			  data: freeRoomsTableConstructor,
 			  columns:[{
@@ -149,7 +133,6 @@ $(document).ready(function() {
               }
 		  });
 
-            //   Set dashboard data in the three boxes on the top
             var patientsWithRoomsDashboard = patientsInHospitalTableConstructor.length || 0;
             $("#patients-with-rooms-live").html(patientsWithRoomsDashboard);
 
@@ -260,9 +243,6 @@ $("body").on('dblclick', '#patients-waiting > tbody > tr', function() {
      window.location.href = URL + "/app/patient/" + NHSnumber;
 });
 
-/*
-     Google analytics
-*/
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
