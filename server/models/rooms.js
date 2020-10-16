@@ -25,7 +25,7 @@ function populateDatabase () {
             availability: rooms[prop]
         });
 
-        room.save().then((disease) => {
+        room.save().then((symptom) => {
 
 		}, (err) => {
             

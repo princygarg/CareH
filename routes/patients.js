@@ -2,7 +2,7 @@ const express = require('express');
 const _ = require('lodash');
 const router = express.Router();
 
-var {scoreOfDisease, Disease} = require('./../server/models/diseases.js');
+var {scoreOfSymptom, Symptom} = require('./../server/models/symptoms.js');
 var {Patient} = require('./../server/models/patient.js');
 var {rooms, Room} = require('./../server/models/rooms.js');
 var isValidDate = require('is-valid-date');
@@ -39,7 +39,7 @@ router.post('/app/addpatient', (req, res) => {
             sex: sex,
             dateOfBirth: dateOfBirth,
             hospitalNumber: _.toUpper(req.body.hospitalNumber),
-            diseases: PD,
+            symptoms: PD,
             lastUpdate: (new Date().getTime())
         });
 
@@ -100,7 +100,7 @@ router.post('/app/updatepatient/:hospitalNumber', (req, res) => {
         hospitalNumber
     }, {
         "$set": {
-            "diseases": PD,
+            "symptoms": PD,
             "lastUpdate": (new Date().getTime())
          }
     },{

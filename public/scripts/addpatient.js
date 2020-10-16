@@ -1,27 +1,27 @@
 var URL = location.protocol + '//' + location.host;
 
 $(document).ready(function() {
-    var diseasesAPI = URL + "/app/getdiseases";
-    $.getJSON(diseasesAPI).done(function(allDiseases) {
-         var diseasesScoresCheckboxes = [];
+    var symptomsAPI = URL + "/app/getsymptoms";
+    $.getJSON(symptomsAPI).done(function(allSymptoms) {
+         var symptomsScoresCheckboxes = [];
 
-         for(var disease in allDiseases) {
-             var diseaseScoreCheckbox = [];
-             diseaseScoreCheckbox[0] = disease;
-             diseaseScoreCheckbox[1] = allDiseases[disease]; // This is the score.
+         for(var symptom in allSymptoms) {
+             var symptomScoreCheckbox = [];
+             symptomScoreCheckbox[0] = symptom;
+             symptomScoreCheckbox[1] = allSymptoms[symptom]; // This is the score.
 
-             var input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + disease + "\">";
-             diseaseScoreCheckbox[2] = input;
+             var input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + symptom + "\">";
+             symptomScoreCheckbox[2] = input;
 
-             diseasesScoresCheckboxes.push(diseaseScoreCheckbox)
+             symptomsScoresCheckboxes.push(symptomScoreCheckbox)
          }
 
          $('#add-new-patient').dataTable({
-               data: diseasesScoresCheckboxes,
+               data: symptomsScoresCheckboxes,
                columns:
                [
                    {
-                       title: "Disease"
+                       title: "Symptom"
                    },
                    {
                        title: "Score"
@@ -35,7 +35,7 @@ $(document).ready(function() {
                paging: false,
                info: false,
                language: {
-                 sSearch: "Search disease"
+                 sSearch: "Search symptom"
                }
           });
      });

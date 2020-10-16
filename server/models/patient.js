@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const _ = require('lodash');
-var {scoreOfDisease, Disease} = require('./diseases.js');
+var {scoreOfSymptom, Symptom} = require('./symptoms.js');
 var rooms = require('./rooms.js');
 
 var PatientSchema = mongoose.Schema({
@@ -26,7 +26,7 @@ var PatientSchema = mongoose.Schema({
 		required: true,
 		unique: true
 	},
-	diseases: {
+	symptoms: {
         type: Array,
         default: []
      },
@@ -53,22 +53,22 @@ PatientSchema.methods.updateScore = function () {
 		reject(patient);
 	})
 
-	Promise.all([promise.then(function (patient) { return patient; }), Disease.find({})])
+	Promise.all([promise.then(function (patient) { return patient; }), Symptom.find({})])
          .then((data) => {
              var patient = data[0];
-             var diseases = data[1];
+             var symptoms = data[1];
 
-             var scoreOfDisease = {};
+             var scoreOfSymptom = {};
              var score = 0;
 
-		   if (! _.isEmpty(diseases) && _.isArray(diseases)) {
-                 for (var i = 0; i < diseases.length; ++i) {
-                     scoreOfDisease[diseases[i].name] = diseases[i].score;
+		   if (! _.isEmpty(symptoms) && _.isArray(symptoms)) {
+                 for (var i = 0; i < symptoms.length; ++i) {
+                     scoreOfSymptom[symptoms[i].name] = symptoms[i].score;
                  }
 
-            	  for (var i = 0; i < patient.diseases.length; ++i) {
-	                if (scoreOfDisease[patient.diseases[i]] > score) {
-	        			score = scoreOfDisease[patient.diseases[i]];
+            	  for (var i = 0; i < patient.symptoms.length; ++i) {
+	                if (scoreOfSymptom[patient.symptoms[i]] > score) {
+	        			score = scoreOfSymptom[patient.symptoms[i]];
 	        	 	 }
              	 }
              }
