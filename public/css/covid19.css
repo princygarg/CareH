@@ -6,6 +6,10 @@
     flex: 1;
     background-color:whitesmoke;
 }  
+#background{
+    background-image: url("https://t3.ftcdn.net/jpg/02/98/00/12/240_F_298001238_dIwzmWmeR4nQ8HxkZvunXvqJnHgjAwVe.jpg");
+    background-size : cover;
+}
 
 .flex-child:first-child {
     margin-right: 20px;
@@ -14,7 +18,7 @@
 #y
 {
     background-image: url("https://t4.ftcdn.net/jpg/03/79/09/87/240_F_379098726_YhBTLs1xMiWPzpP2meNWZHer49tBhGr6.jpg");
-    background-size : cover;
+      background-size : cover;
 }
 #invent{
    margin-left:10px;
