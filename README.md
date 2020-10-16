@@ -58,7 +58,7 @@ Basic guidelines that one must keep in mind.
 On double clicking any patient from the dashboard his page will get open up where we can see his score, discharge him, move to waiting list and get his personal details.
 
 ## Technologies 
-### Frontend
+### Backend
 #### Node Js  
 #### Express.js
 ### Frontend
