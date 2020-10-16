@@ -26,6 +26,7 @@ var PatientSchema = mongoose.Schema({
 		required: true,
 		unique: true
 	},
+	
 	symptoms: {
         type: Array,
         default: []

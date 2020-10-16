@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    background-color:whitesmoke;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+#y
+{
+    background-image: url("https://t4.ftcdn.net/jpg/03/79/09/87/240_F_379098726_YhBTLs1xMiWPzpP2meNWZHer49tBhGr6.jpg");
+    background-size : cover;
+}
+#invent{
+   margin-left:10px;
+}
+
+#f{
+    text-align: center;
+    font-family: "Times New Roman";
+    background-color: teal;
+    color:white;
+}
+
