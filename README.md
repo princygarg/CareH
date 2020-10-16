@@ -56,3 +56,15 @@ Basic guidelines that one must keep in mind.
 ### Patient Page
 ![Patient](images/Patient.PNG)
 On double clicking any patient from the dashboard his page will get open up where we can see his score, discharge him, move to waiting list and get his personal details.
+
+## Technologies 
+### Frontend
+#### Node Js  
+#### Express.js
+### Frontend
+#### HTML   
+#### CSS   
+#### jQuery  
+### Database
+#### mongoDB  
+#### Mongoose
