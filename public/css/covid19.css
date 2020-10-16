@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+    border-color: black;
+}
+
+.flex-child {
+    flex: 1;
+    background-color: whitesmoke;
+    margin-left:3px;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+#div-li{
+  margin-left:90px;
+  width: 50%;
+  padding: 10px;
+  background-color:whitesmoke;
+   
+}
+#f{
+    text-align: center;
+    font-family: "Times New Roman";
+}
+#col
+{
+    background-color: teal;
+}
