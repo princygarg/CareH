@@ -20,7 +20,9 @@ Open MongoDB Compass.
 Go back to the Terminal (PowerShell) and be sure that you are pointing inside the project folder. To open the application, type ‘node app.js’ and press Enter.  
 The application should be live on the local port 3000.  
 Type http://localhost:3000/ into a browser.  
-To login use the username: careH@staff and the password: 12345678  
+To login use the 
+####Username: careH@staff
+####Password: 12345678  
 Now you should be inside the application.  
 
 ## How to use it 📖
