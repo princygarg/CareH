@@ -12,12 +12,13 @@
     margin-bottom: 12px; /* Add some space below the input */
     min-width: 133px;
     border-radius: 5px;
+    padding: 10
 }
 
 #myUL {
     /* Remove default list styling */
     list-style-type: none;
-    padding: 0;
+    padding: 10;
     margin: 0 15% 0 15%;
     border-radius: 10px;
     height:350px;
