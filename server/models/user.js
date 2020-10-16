@@ -16,8 +16,8 @@ var UserSchema = mongoose.Schema({
 var User = module.exports = mongoose.model('User', UserSchema);
 
 var adminUser = new User({
-	username: 'admin',
-	password: 'admin'
+	username: 'careH@staff',
+	password: '12345678'
 });
 createUser(adminUser, function (aux1, aux2) {
 	
