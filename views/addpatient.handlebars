@@ -44,7 +44,7 @@
         <div class="form-group row">
             <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Contact no.</label>
             <div class="col-sm-9 col-md-9 col-lg-6">
-                <input class="form-control" style="width: 100%;" type="text" name="contactNumber" required="true" placeholder="Enter Contact number">
+                <input class="form-control" style="width: 100%;" type="text" name="hospitalNumber" required="true" placeholder="Enter contact number">
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-group row">
+        {{!-- <div class="form-group row">
             <label for="zone" class="col-sm-3 col-md-3 col-lg-5 col-form-label">Choose the zone :</label>
 
                <select name="zone" id="zone">
@@ -71,22 +71,22 @@
                <option value="Yellow">Yellow</option>
                <option value="Green">Green</option>
                </select>
-     </div>
-     <div class="form-group row">
-            <label class="col-sm-3 col-md-3 col-lg-9 col-form-label" > Have you been in contact with a Covid-19 patient for the past 14 days?</label>
+     </div> --}}
+     {{!-- <div class="form-group row">
+            <label class="col-sm-3 col-md-3 col-lg-9 col-form-label" > Have you been in hospital with a Covid-19 patient for the past 14 days?</label>
            <form method="get" action="/app/covid">
              <div class="col-sm-9 col-md-9 col-lg-9" >
                 <div class="btn-group" data-toggle="buttons">
                   <label class="btn btn-primary active" style="margin-left:150px;">
-                    <input id="male-radio" type="radio" name="sex" value="male" autocomplete="off" checked>Yes
+                    <input id="male-radio" type="radio" name="hospitalWithCovid" value="Yes" autocomplete="off" checked>Yes
                   </label>
                   <label class="btn btn-primary" style="margin-left:10px;">
-                    <input id="female-radio" type="radio" name="sex" value="female" autocomplete="off"> No
+                    <input id="female-radio" type="radio" name="hospitalWithCovid" value="No" autocomplete="off"> No
                   </label>
                 </div>
             </div>
             </form>
-        </div>
+        </div> --}}
 
 
     	<table id="add-new-patient" class="table table-striped table-bordered" cellspacing="0" width="100%">

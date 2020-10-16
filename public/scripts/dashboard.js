@@ -51,7 +51,7 @@ $(document).ready(function() {
 		  $('#patients-waiting').dataTable({
 		       data: patientsWaitingTableConstructor,
 		       columns: [{
-		       	 title: "<span class=\"fa fa-hospital-o fa-fw\" style=\"color: black;\"></span>   " + "  no.",
+		       	 title: "Contact no.",
                      width: "30%"
 		       }, {
 		           title: "Patients waiting",
@@ -69,7 +69,7 @@ $(document).ready(function() {
                    searchPlaceholder: "Search patient waiting...",
                    sSearch: ""
                  },
-               aaSorting: [[2, 'desc']],
+              //  aaSorting: [[2, 'desc']],
                fnCreatedRow: function(nRow, aData, iDisplayIndex) {
                    if (aData[2] > 35) { 
                        $('td:eq(2)', nRow).css("background-color", "#ffad99");
@@ -84,11 +84,11 @@ $(document).ready(function() {
 		  $('#patients-in-hospital').DataTable({
    			   data: patientsInHospitalTableConstructor,
 		        columns:[{
-	                title: "<span class=\"fa fa-hospital-o fa-fw\" style=\"color: black;\"></span>   " + "  no.",
-                     width: "25%"
+	                title: "Contact no.",
+                     width: "27%"
 	            },{
 	                title: "Patients with rooms",
-                     width: "45%"
+                     width: "43%"
 	            },{
 	           	 title: "Room",
                      width: "15%"

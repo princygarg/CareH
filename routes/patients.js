@@ -38,6 +38,7 @@ router.post('/app/addpatient', (req, res) => {
             lastName: _.capitalize(req.body.lastName),
             sex: sex,
             dateOfBirth: dateOfBirth,
+            // contactWithCovid: contactWithCovid,
             hospitalNumber: _.toUpper(req.body.hospitalNumber),
             symptoms: PD,
             lastUpdate: (new Date().getTime())
