@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+
+    <div id="div-li">
+         <div class="row">
+              <div id="col">
+            <h1 style="color:white" id="f" >Add new symptom in the system</h1>
+                </div>
+<<<<<<< HEAD:views/adddisease.handlebars
+
+
+            <form action="/app/adddiseasePage" method="post">
+=======
+             
+          
+            <form action="/app/addsymptomPage" method="post">
+>>>>>>> b4de10002ee7084af096b45aef0cb805eabbfb92:views/addsymptom.handlebars
+                <div class="form-group row">
+                    <label class="col-sm-5 col-md-5 col-lg-5 col-form-label ">Symptom name</label>
+                    <div class="col-sm-7 col-md-7 col-lg-5">
+<<<<<<< HEAD:views/adddisease.handlebars
+                        <input class="form-control" style="width: 80%" type="text" name="diseaseName" required="true" placeholder="Enter new disease name...">
+=======
+                        <input class="form-control" style="width: 100%;" type="text" name="symptomName" required="true" placeholder="Enter new symptom name...">
+>>>>>>> b4de10002ee7084af096b45aef0cb805eabbfb92:views/addsymptom.handlebars
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Symptom score</label>
+                    <div class="col-sm-7 col-md-7 col-lg-5">
+                        <input class="form-control" style="width: 100%;" type="number" name="symptomScore" required="true" placeholder="Enter new symptom score...">
+                    </div>
+                </div>
+
+            	<input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Add symptom">
+            </form>
+        </div>
+
+        <hr style="border-top: dotted 1px;" />
+
+        <div class="row">
+<<<<<<< HEAD:views/adddisease.handlebars
+            <h4 style="margin-top: 0px;">Delete diseases from the system</h4>
+            <form action="/app/deletediseases" method="post">
+                <table id="diseases-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+
+=======
+            <h4 style="margin-top: 0px;">Delete symptoms from the system</h4>
+            <form action="/app/deletesymptoms" method="post">
+                <table id="symptoms-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    
+>>>>>>> b4de10002ee7084af096b45aef0cb805eabbfb92:views/addsymptom.handlebars
+                </table>
+
+                <input class="btn btn-danger" style="float: right;" type="Submit" name="Submit" value="Delete symptoms">
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/systemSettings.js"></script>

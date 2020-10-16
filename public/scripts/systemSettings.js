@@ -1,24 +1,24 @@
 var URL = location.protocol + '//' + location.host;
 
 $(document).ready(function() {
-    var diseasesAPI = URL + "/app/getdiseases/";
+    var symptomsAPI = URL + "/app/getsymptoms/";
 
-    $.getJSON(diseasesAPI).done(function(allDiseases) {
-           var diseasesScoresCheckboxes = [];
+    $.getJSON(symptomsAPI).done(function(allSymptoms) {
+           var symptomsScoresCheckboxes = [];
 
-           for(var disease in allDiseases) {
-             var diseaseScoreCheckbox = [];
-        	   diseaseScoreCheckbox[0] = disease;
-        	   diseaseScoreCheckbox[1] = allDiseases[disease];
-             diseaseScoreCheckbox[2] = "<input type=\"checkbox\" name=\"DD[]\" value=\"" + disease + "\">";
+           for(var symptom in allSymptoms) {
+             var symptomScoreCheckbox = [];
+        	   symptomScoreCheckbox[0] = symptom;
+        	   symptomScoreCheckbox[1] = allSymptoms[symptom];
+             symptomScoreCheckbox[2] = "<input type=\"checkbox\" name=\"DD[]\" value=\"" + symptom + "\">";
 
-        	   diseasesScoresCheckboxes.push(diseaseScoreCheckbox)
+        	   symptomsScoresCheckboxes.push(symptomScoreCheckbox)
            }
 
-           $('#diseases-table').dataTable({
-		      data: diseasesScoresCheckboxes,
+           $('#symptoms-table').dataTable({
+		      data: symptomsScoresCheckboxes,
 		      columns:[{
-	              title: "Disease",
+	              title: "Symptom",
                   width: "50%"
 	          },{
 	              title: "Score",
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		      paging: false,
                 info: false,
                 language: {
-                  searchPlaceholder: "Search disease...",
+                  searchPlaceholder: "Search symptom...",
                   sSearch: ""
                 },
 		 });

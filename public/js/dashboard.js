@@ -1,5 +1,5 @@
 $(document).ready(function () {
-      var flickerAPI = "http://localhost:3000/app/getdiseases";
+      var flickerAPI = "http://localhost:3000/app/getsymptoms";
       $.getJSON(flickerAPI).done(function(data) {
           var form = $("<form/>", {
               action:'/app/addpatient',
@@ -14,6 +14,6 @@ $(document).ready(function () {
 
           form.append('<input type="submit" value="Submit">');
 
-          $("#show-diseases-form").append(form);
+          $("#show-symptoms-form").append(form);
       });
 });

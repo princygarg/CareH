@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var {Disease} = require("./server/models/diseases.js");
+var {Symptom} = require("./server/models/symptoms.js");
 var {Room} = require("./server/models/rooms.js");
 
 var data=[
@@ -8,14 +8,41 @@ var data=[
         score: 20
     },
     {
-        name:"Cough",
+        name:"Dry Cough",
         score: 10
     },
     {
-        name:"Breathing problem",
-        score: 30
+        name:"Difficulty in breathing",
+        score: 70
+    },
+    {
+        name:"Sore throat",
+        score: 10
+    },
+    {
+        name:"Loss of taste/smell",
+        score: 40
+    },
+    {
+        name:"Chest pain",
+        score: 50
+    },
+    {
+        name:"Tiredness",
+        score: 5
+    },
+    {
+        name:"Acnes and pains",
+        score: 5
+    },
+    {
+        name:"Headache",
+        score: 5
+    },
+    {
+        name:"Lost of movement/speech",
+        score: 100
     }
-    
 ];
 
 var data1=[
@@ -33,12 +60,12 @@ var data1=[
 
 function seedDB(){
         data.forEach(function(seed){
-            var disease = Disease({
+            var symptom = Symptom({
                 name: seed.name,
                 score: seed.score
             });
-            disease.save().then((disease) => {
-                console.log('Disease added');
+            symptom.save().then((symptom) => {
+                console.log('Symptom added');
             }).catch((err) => {
                 console.log(err);
             });

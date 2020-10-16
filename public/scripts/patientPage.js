@@ -40,36 +40,36 @@ $(document).ready(function() {
            $("#panel-score").attr("class", "panel panel-red");
        }
 
-       var diseasesAPI = URL +"/app/getdiseases";
-       $.getJSON(diseasesAPI).done(function(allDiseases) {
-           var diseasesScoresCheckboxes = [];
+       var symptomsAPI = URL +"/app/getsymptoms";
+       $.getJSON(symptomsAPI).done(function(allSymptoms) {
+           var symptomsScoresCheckboxes = [];
 
-           for(var disease in allDiseases) {
-             var diseaseScoreCheckbox = [];
-        	   diseaseScoreCheckbox[0] = disease;
-        	   diseaseScoreCheckbox[1] = allDiseases[disease];
+           for(var symptom in allSymptoms) {
+             var symptomScoreCheckbox = [];
+        	   symptomScoreCheckbox[0] = symptom;
+        	   symptomScoreCheckbox[1] = allSymptoms[symptom];
 
         	   var input;
-               if (patient["diseases"].length !== 0) {
-                   for(var i = 0; i < patient["diseases"].length; i++) {
-            	   	   if(disease === patient["diseases"][i]) {
-            	   	   	   input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + disease + "\" checked>";
+               if (patient["symptoms"].length !== 0) {
+                   for(var i = 0; i < patient["symptoms"].length; i++) {
+            	   	   if(symptom === patient["symptoms"][i]) {
+            	   	   	   input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + symptom + "\" checked>";
             	   	   	   break;
             	   	   } else {
-            	   	        input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + disease + "\">";
+            	   	        input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + symptom + "\">";
             	   	   }
             	   }
                } else {
-                   input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + disease + "\">";
+                   input = "<input type=\"checkbox\" name=\"PD[]\" value=\"" + symptom + "\">";
                }
 
-          	diseaseScoreCheckbox[2] = input;
-        	     diseasesScoresCheckboxes.push(diseaseScoreCheckbox)
+          	symptomScoreCheckbox[2] = input;
+        	     symptomsScoresCheckboxes.push(symptomScoreCheckbox)
            }
            $('#diagnosis').dataTable({
-		      data: diseasesScoresCheckboxes,
+		      data: symptomsScoresCheckboxes,
 		      columns:[{
-	              title: "Disease"
+	              title: "Symptom"
 	           },{
 	              title: "Score"
 	           },{
@@ -80,7 +80,7 @@ $(document).ready(function() {
 		      paging: false,
                 info: false,
                 language: {
-                sSearch: "Search disease"
+                sSearch: "Search symptom"
               }
 		   });
        });

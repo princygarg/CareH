@@ -1,5 +1,5 @@
 const mongoose = require ('mongoose');
-var DiseaseSchema = mongoose.Schema({
+var SymptomSchema = mongoose.Schema({
     name: {
         type: String,
         unique: true,
@@ -12,8 +12,8 @@ var DiseaseSchema = mongoose.Schema({
     }
 });
 
-var Disease = mongoose.model('Disease', DiseaseSchema);
+var Symptom = mongoose.model('Symptom', SymptomSchema);
 
-var scoreOfDisease = {};
+var scoreOfSymptom = {};
 
-module.exports = {scoreOfDisease, Disease};
+module.exports = {scoreOfSymptom, Symptom};
