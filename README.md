@@ -20,9 +20,7 @@ Open MongoDB Compass.
 Go back to the Terminal (PowerShell) and be sure that you are pointing inside the project folder. To open the application, type ‘node app.js’ and press Enter.  
 The application should be live on the local port 3000.  
 Type http://localhost:3000/ into a browser.  
-To login use the  
-#### Username: careH@staff  
-#### Password: 12345678  
+To login use the **Username: careH@staff** and **Password: 12345678**  
 Now you should be inside the application.  
 
 ## How to use it 📖
@@ -59,14 +57,8 @@ Basic guidelines that one must keep in mind.
 ![Patient](images/Patient.PNG)
 On double clicking any patient from the dashboard his page will get open up where we can see his score, discharge him, move to waiting list and get his personal details.
 
+
 ## Technologies 
-### Backend
-#### Node Js  
-#### Express.js
-### Frontend
-#### HTML   
-#### CSS   
-#### jQuery  
-### Database
-#### mongoDB  
-#### Mongoose
+- **Backend** - Node Js ,Express.js
+- **Frontend** - HTML, CSS, Bootstrap, jQuery
+- **Database** - mongoDB
