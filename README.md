@@ -7,8 +7,8 @@
 
 ## Prerequisites
 
-Node.js 6.9.1 or later - install from https://nodejs.org/  
-MongoDB - download from https://www.mongodb.com/try/download/community
+- Node.js 6.9.1 or later - install from https://nodejs.org/  
+- MongoDB - download from https://www.mongodb.com/try/download/community
 
 ## Installing - easy 🔌
 
