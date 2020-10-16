@@ -1,6 +1,6 @@
 # Description 👈
 
-- It's a web application for managing hospitals rooms and determining the patient's priority for isolation. The app provides a centralised hub for managing the patients and planning their distribution across hospital’s rooms. The times being as they are of a global contagious pandemic, room and equipment management in a hospital is of utmost importance and that is what our Care Hospitals does.
+- It's a web application for managing hospitals rooms and determining the patient's priority for isolation. The app provides a centralised hub for managing the patients and planning their distribution across hospital’s rooms. The times being as they are of a global contagious pandemic, room and equipment management in a hospital is of utmost importance and that is what out Care Hospitals does.
 
 - It allows nurses to keep track of the patients and their diseases in real time and to have an overview over the patients and rooms, and better manage the rooms assignment across patients. It also allows the hospital staff to take special measures in case of a Covid-19 patient and to keep check of the things required in hospitals.
 
@@ -31,6 +31,10 @@ The first table gives the details of the patients already with room.
 The second table shows patients waiting.  
 The third table shows the rooms available.  
 To allot room to any patient click on his name in the Waiting list and the room that you want to allocate.  
+  
+  
+![Alert](images/alert.png)
+To clear the red warning sign you need to go on the patient’s personal page. To do that, you have to double click on his name. By clicking on the ‘Update button’ on the bottom of the page, the patient’s diagnosis in updated for the next 24 hours (consequently, the red warning sign disappears).
 
 ### Add Covid-19 patient page
 ![Add patient](images/Add_patient.PNG)
