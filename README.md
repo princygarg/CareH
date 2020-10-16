@@ -25,12 +25,14 @@ Now you should be inside the application.
 
 ## How to use it 📖
 ### Dashboard
+![Dashboard](Homepage.PNG)
 Data about patients and rooms is available here. The page is split into three tables.  
 The first table gives the details of the patients already with room.  
 The second table shows patients waiting.  
 The third table shows the rooms available.  
+To allot room to any patient click on his name in the Waiting list and the room that you want to allocate.  
 
-### Add COvid-19 patient page
+### Add Covid-19 patient page
 You can add a new patient in the system with his personal details and his covid-19 symptoms. The application automatically computes the score of the patient based on the entered symptoms.
 
 ### Add symptom Page
@@ -42,5 +44,9 @@ With increasing number of cases the hospital staff needs to be expanded continuo
 ### Add room
 With the continuous increase in patients the hospitals need are continuously adapting new measures to overcome the shortage of beds and hence this option allows us to add rooms.
 
-### Inventory
-Here the hospital management can keep a check of the essentials like PPE kits, gloves, santizers, test kits and other things.
+### Inventory & Guidelines
+Here the hospital management can keep a check of the essentials like PPE kits, gloves, santizers, test kits and other things.  
+Basic guidelines that one must keep in mind.
+
+### Patient Page
+On double clicking any patient from the dashboard his page will get open up where we can see his score, discharge him, move to waiting list and get his personal details.
